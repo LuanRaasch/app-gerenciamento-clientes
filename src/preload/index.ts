@@ -16,6 +16,11 @@ const api = {
     return () => {
       ipcRenderer.off("new-customer", callback)
     }
+  },
+
+  fetchUsers: () => {
+    //INVOKE -> enviar e receber
+    return ipcRenderer.invoke("fetch-users")
   }
 }
 
