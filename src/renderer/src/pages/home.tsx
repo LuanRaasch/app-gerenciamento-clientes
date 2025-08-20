@@ -8,27 +8,9 @@ export function Home() {
   const { data } = useQuery({
     queryKey: ["customers"], queryFn: async () => {
       const response = await window.api.fetchAllCustomers();
-      console.log(response);
       return response;
     }
   })
-
-  // async function handleAdd() {
-  //   const response = await window.api.fetchAllCustomers()
-  //   console.log(response)
-  // }
-
-  // async function handleCustomerById() {
-  //   const docId = '1938df70-a2ec-4993-818b-67e735a88b1f'
-  //   const response = await window.api.fetchCustomerById(docId)
-  //   console.log(response)
-  // }
-
-  // async function handleDeleteCustomer() {
-  //   const docId = '1938df70-a2ec-4993-818b-67e735a88b1f'
-  //   const response = await window.api.deleteCustomer(docId)
-  //   console.log(response)
-  // }
 
   return (
     <div className='flex-1 flex flex-col py-12 text-white'>
