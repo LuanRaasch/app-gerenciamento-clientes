@@ -23,7 +23,7 @@ export function Home() {
       <section className='flex flex-col gap-6 w-full h-screen overflow-y-auto px-10 pb-[200px]'>
         {data?.map((customer) => (
           <Link
-            to="/"
+            to={`/customer/${customer._id}`}
             key={customer._id}
             className='bg-gray-800 px-4 py-3 rounded'
           >
